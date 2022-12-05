@@ -24,8 +24,8 @@ function Login({ setStoredToken }) {
       .then((res) => res.json())
       .then((data) => {
         if (data.jwt) {
-          localStorage.setItem("token", data.token);
-          setStoredToken(data.token);
+          localStorage.setItem("token", data.jwt);
+          setStoredToken(data.jwt);
           navigate("/");
         } else {
           alert("Invalid credentials");

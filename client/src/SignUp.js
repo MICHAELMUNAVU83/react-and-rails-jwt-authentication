@@ -23,9 +23,9 @@ function SignUp({ setStoredToken }) {
     })
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.jwt);
         console.log(data);
-        setStoredToken(data.token);
+        setStoredToken(data.jwt);
       });
 
     setUsername("");
