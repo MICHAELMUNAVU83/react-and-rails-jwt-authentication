@@ -20,8 +20,8 @@ function Hello({ setStoredToken }) {
       Hello {name}
       <button
         onClick={() => {
-          localStorage.setItem("token", null);
-          setStoredToken(null);
+          localStorage.setItem("token", "");
+          setStoredToken("");
         }}
       >
         Log out
